@@ -7,7 +7,7 @@ limitTime=60
 interval=5
 
 # Create a directory and create a file into it every five seconds.
-mkdir testDirectory
+test -d testDirectory || mkdir testDirectory
 for (( i=1; i<=$(( limitTime / interval )); i++ ))
 do
     sleep ${interval}
